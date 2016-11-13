@@ -24,7 +24,6 @@
 
  Пример: #define LED1    C, 9, MODE_OUTPUT_PUSH_PULL, SPEED_2MHZ, AF0, 0
  Пример: #define BUTTON1 C, 8, MODE_INPUT_PULL_UP,    SPEED_2MHZ, AF0, 0
- Пример: #define BUTTON1 C, 8, MODE_INPUT_PULL_UP,    SPEED_2MHZ, AF0, 0
 
  Доступные операции:
  PIN_CONFIGURATION(PIN_NAME) - настройка gpio
@@ -42,38 +41,38 @@
 // Режимы
 #define MODE_OUTPUT_PUSH_PULL               MODE_OUTPUT_PUSH_PULL
 #define MODE_OUTPUT_OPEN_DRAIN              MODE_OUTPUT_OPEN_DRAIN
-#define MODE_OUTPUT_OPEN_DRAIN_PULL_UP  	MODE_OUTPUT_OPEN_DRAIN_PULL_UP
-#define MODE_AF_PUSH_PULL           		MODE_AF_PUSH_PULL
-#define MODE_AF_OPEN_DRAIN      			MODE_AF_OPEN_DRAIN
-#define MODE_AF_OPEN_DRAIN_PULL_UP      	MODE_AF_OPEN_DRAIN_PULL_UP
-#define MODE_INPUT_FLOATING         		MODE_INPUT_FLOATING
-#define MODE_INPUT_PULL_UP      			MODE_INPUT_PULL_UP
-#define MODE_INPUT_PULL_DOWN				MODE_INPUT_PULL_DOWN
-#define MODE_ANALOG     					MODE_ANALOG
+#define MODE_OUTPUT_OPEN_DRAIN_PULL_UP      MODE_OUTPUT_OPEN_DRAIN_PULL_UP
+#define MODE_AF_PUSH_PULL                   MODE_AF_PUSH_PULL
+#define MODE_AF_OPEN_DRAIN                  MODE_AF_OPEN_DRAIN
+#define MODE_AF_OPEN_DRAIN_PULL_UP          MODE_AF_OPEN_DRAIN_PULL_UP
+#define MODE_INPUT_FLOATING                 MODE_INPUT_FLOATING
+#define MODE_INPUT_PULL_UP                  MODE_INPUT_PULL_UP
+#define MODE_INPUT_PULL_DOWN                MODE_INPUT_PULL_DOWN
+#define MODE_ANALOG                         MODE_ANALOG
 
 // Скорости
 #define SPEED_2MHZ                          0UL
-#define SPEED_25MHZ                     	1UL
-#define SPEED_50MHZ                 		2UL
-#define SPEED_100MHZ            			3UL
+#define SPEED_25MHZ                         1UL
+#define SPEED_50MHZ                         2UL
+#define SPEED_100MHZ                        3UL
 
 // Альтернативные функции
-#define AF0                 				0UL
-#define AF1             					1UL
-#define AF2         						2UL
-#define AF3     							3UL
-#define AF4 								4UL
-#define AF5									5UL
-#define AF6                         		6UL
-#define AF7                     			7UL
-#define AF8                 				8UL
-#define AF9             					9UL
-#define AF10        						10UL
-#define AF11    							11UL
-#define AF12								12UL
+#define AF0                                 0UL
+#define AF1                                 1UL
+#define AF2                                 2UL
+#define AF3                                 3UL
+#define AF4                                 4UL
+#define AF5                                 5UL
+#define AF6                                 6UL
+#define AF7                                 7UL
+#define AF8                                 8UL
+#define AF9                                 9UL
+#define AF10                                10UL
+#define AF11                                11UL
+#define AF12                                12UL
 #define AF13                                13UL
-#define AF14                            	14UL
-#define AF15                        		15UL
+#define AF14                                14UL
+#define AF15                                15UL
 
 //--------------------------------------------------------------------------------------------------
 // Установка альтернативной функции GPIO

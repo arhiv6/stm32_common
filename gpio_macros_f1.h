@@ -21,10 +21,8 @@
  SPEED - скорость (актуально только для выхода)
  DEFAULT_STATE - значение поумолчанию для настроенных на выход пинов
 
-
- Пример: #define PIN_LED C, 9, MODE_OUTPUT_PUSH_PULL, SPEED_2MHZ
- Пример: #define PIN_LED C, 9, MODE_OUTPUT_PUSH_PULL, SPEED_2MHZ
- Пример: #define PIN_LED C, 9, MODE_OUTPUT_PUSH_PULL, SPEED_2MHZ
+ Пример: #define PIN_LED C, 9, MODE_OUTPUT_PUSH_PULL, SPEED_2MHZ,   0
+ Пример: #define BUTTON1 C, 8, MODE_INPUT_PULL_UP,    SPEED_2MHZ,   0
 
  Доступные операции:
  PIN_CONFIGURATION(PIN_NAME) - настройка gpio
