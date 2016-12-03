@@ -10,7 +10,7 @@
 // If expression is true, the ASSERT() macro does nothing. The ASSERT() macro may be removed
 // at compile time by defining NDEBUG as a macro (e.g., by using the compiler option -DNDEBUG).
 
-static void __assert(const char *function, const char *file, int line, const char *expression)
+inline static void _assert(const char *function, const char *file, int line, const char *expression)
 {
     if (function)
     {
@@ -28,7 +28,7 @@ static void __assert(const char *function, const char *file, int line, const cha
 #if defined(NDEBUG)
     #define ASSERT(e) ((void)0)
 #else
-    #define ASSERT(e) ((e) ? (void)0 :  __assert(__func__, __FILE__, __LINE__, #e))
+    #define ASSERT(e) ((e) ? (void)0 :  _assert(__func__, __FILE__, __LINE__, #e))
 #endif
 
 #endif // _ASSERT_H
