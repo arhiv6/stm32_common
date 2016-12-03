@@ -1,8 +1,6 @@
 #ifndef _GPIO_MACROS_F4_H
 #define _GPIO_MACROS_F4_H
 
-# include "stm32f4xx.h"
-
 /*
  Данный набор макросов упрощает работу с GPIO портами микроконтроллеров STM32F4xx
  Протестировано на STM32F407
@@ -31,7 +29,7 @@
  PIN_OFF(PIN_NAME)           - выключить (установка лог. 0)
  PIN_TOGGLE(PIN_NAME)        - переключить состояние
  PIN_ISSET_IN - состояние порта снаружи мирросхемы
- PIN_ISSET_OUT - состояние порта, установленное в микросхеме
+ PIN_ISSET - состояние порта, установленное в микросхеме
  Последние два используются только в конструкциях вида if(PIN_ISSET(PIN_NAME))
 */
 
@@ -262,10 +260,10 @@ GPIO##PORT->ODR |= ((DEFAULT_STATE & 1UL) << PIN);
 #define _PIN_TOGGLE(PORT, PIN, MODE, SPEED, ALTERNATE, DEFAULT_STATE) \
     do { GPIO##PORT->ODR ^= (1UL << PIN); } while (0)
 
-#define _PIN_ISSET_IN(PORT, PIN, MODE, SPEED, ALTERNATE, DEFAULT_STATE) \
-    ( GPIO##PORT->ODR & (1UL << PIN)) )
+//#define _PIN_ISSET_IN(PORT, PIN, MODE, SPEED, ALTERNATE, DEFAULT_STATE) \
+//    ( GPIO##PORT->ODR & (1UL << PIN)) )
 
-#define _PIN_ISSET_OUT(PORT, PIN, MODE, SPEED, ALTERNATE, DEFAULT_STATE) \
+#define _PIN_ISSET(PORT, PIN, MODE, SPEED, ALTERNATE, DEFAULT_STATE) \
     ( GPIO##PORT->IDR & (1UL << PIN) )
 
 //--------------------------------------------------------------------------------------------------
@@ -275,7 +273,7 @@ GPIO##PORT->ODR |= ((DEFAULT_STATE & 1UL) << PIN);
 #define PIN_ON(PIN_DESCRIPTION)             _PIN_ON(PIN_DESCRIPTION)
 #define PIN_OFF(PIN_DESCRIPTION)            _PIN_OFF(PIN_DESCRIPTION)
 #define PIN_TOGGLE(PIN_DESCRIPTION)         _PIN_TOGGLE(PIN_DESCRIPTION)
-#define PIN_ISSET_IN(PIN_DESCRIPTION)       _PIN_ISSET_IN(PIN_DESCRIPTION)
-#define PIN_ISSET_OUT(PIN_DESCRIPTION)      _PIN_ISSET_OUT(PIN_DESCRIPTION)
+//#define PIN_ISSET_IN(PIN_DESCRIPTION)       _PIN_ISSET_IN(PIN_DESCRIPTION)
+#define PIN_ISSET(PIN_DESCRIPTION)          _PIN_ISSET(PIN_DESCRIPTION)
 
 #endif // _GPIO_MACROS_F4_H
