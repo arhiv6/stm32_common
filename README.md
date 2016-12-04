@@ -1,5 +1,6 @@
 # STM32_common
-Различные шаблоны кода, часто применяемые в проектах на микроконтроллерах STM32
+Различные шаблоны кода, часто применяемые в проектах на микроконтроллерах STM32.
 
-- **gpio_macros_xx.h** - Настройка и управление gpio пинами с использованием препроцессора
+- **gpio_macros_XX.h** - Настройка и управление gpio пинами с использованием препроцессора
 - **assert.h** - реализация макроса ASSERT (используется с Embedded String Functions от ChaN)
+- **xprintf.X** - Embedded String Functions от ChaN (<http://elm-chan.org/fsw/strf/xprintf.html>)
