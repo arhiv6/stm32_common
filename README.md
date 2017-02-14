@@ -5,3 +5,4 @@
 - **assert.h** - реализация макроса ASSERT (используется с Embedded String Functions от ChaN)
 - **xprintf.X** - Embedded String Functions от ChaN (<http://elm-chan.org/fsw/strf/xprintf.html>)
 - **uart1.X** - настройка и использование UART + кольцевой буфер на приём и передачу
+- **stm32.ld** - универсальный скрипт линкера от Bjørn Forsman (<https://github.com/bjornfor/>)
