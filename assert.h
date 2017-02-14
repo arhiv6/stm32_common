@@ -28,7 +28,7 @@ inline static void _assert(const char *function, const char *file, int line, con
 #if defined(NDEBUG)
     #define ASSERT(e) ((void)0)
 #else
-    #define ASSERT(e) ((e) ? (void)0 :  _assert(__func__, __FILE__, __LINE__, #e))
+    #define ASSERT(e) ((e) ? (void)0 :  _assert(__FUNCTION__, __FILE__, __LINE__, #e))
 #endif
 
 #endif // _ASSERT_H
