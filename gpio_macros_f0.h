@@ -1,9 +1,9 @@
-#ifndef _GPIO_MACROS_F4_H
-#define _GPIO_MACROS_F4_H
+#ifndef _GPIO_MACROS_F0_H
+#define _GPIO_MACROS_F0_H
 
 /*
  Данный набор макросов упрощает работу с GPIO портами микроконтроллеров STM32F4xx
- Протестировано на STM32F407
+ Протестировано на STM32F030
 
  За основу взято:
  http://we.easyelectronics.ru/STM32/udobnaya-nastroyka-gpio-portov.html#comment114408
@@ -47,10 +47,9 @@
 #define MODE_ANALOG                         MODE_ANALOG
 
 // Скорости
-#define SPEED_2MHZ                          0UL
-#define SPEED_25MHZ                         1UL
-#define SPEED_50MHZ                         2UL
-#define SPEED_100MHZ                        3UL
+#define SPEED_2MHZ                          2UL
+#define SPEED_10MHZ                         1UL
+#define SPEED_50MHZ                         3UL
 
 // Альтернативные функции
 #define AF0                                 0UL
@@ -60,15 +59,6 @@
 #define AF4                                 4UL
 #define AF5                                 5UL
 #define AF6                                 6UL
-#define AF7                                 7UL
-#define AF8                                 8UL
-#define AF9                                 9UL
-#define AF10                                10UL
-#define AF11                                11UL
-#define AF12                                12UL
-#define AF13                                13UL
-#define AF14                                14UL
-#define AF15                                15UL
 
 //--------------------------------------------------------------------------------------------------
 // Установка альтернативной функции GPIO
@@ -270,4 +260,4 @@ GPIO##PORT->ODR |= ((DEFAULT_STATE & 1UL) << PIN);
 #define PIN_TOGGLE(PIN_DESCRIPTION)         _PIN_TOGGLE(PIN_DESCRIPTION)
 #define PIN_ISSET(PIN_DESCRIPTION)          _PIN_ISSET(PIN_DESCRIPTION)
 
-#endif // _GPIO_MACROS_F4_H
+#endif // _GPIO_MACROS_F0_H
