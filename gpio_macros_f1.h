@@ -139,7 +139,7 @@
     _GPIO_PIN##PIN##_CONFIGURATION(PORT, 8UL); \
         GPIO##PORT->BSRR |= (1UL << PIN) << 16;
 
-#define _SET_MODE_INPUT_ANALOG(PORT, PIN, MODE, SPEED, DEFAULT_STATE) \
+#define _SET_MODE_ANALOG(PORT, PIN, MODE, SPEED, DEFAULT_STATE) \
     _GPIO_PIN##PIN##_CONFIGURATION(PORT, 0UL)
 
 //--------------------------------------------------------------------------------------------------
