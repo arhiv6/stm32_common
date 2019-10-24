@@ -247,7 +247,7 @@ GPIO##PORT->ODR |= ((DEFAULT_STATE & 1UL) << PIN);
 // Реализация макросов
 
 #define _PIN_CONFIGURATION(PORT, PIN, MODE, SPEED, ALTERNATE, DEFAULT_STATE) \
-    do { _SET_##MODE(PORT, PIN, MODE, SPEED, ALTERNATE, DEFAULT_STATE) } while (0)
+    do { __disable_irq(); _SET_##MODE(PORT, PIN, MODE, SPEED, ALTERNATE, DEFAULT_STATE); __enable_irq();} while (0)
 
 #define _PIN_ON(PORT, PIN, MODE, SPEED, ALTERNATE, DEFAULT_STATE) \
     do { GPIO##PORT->BSRR = (1UL << PIN); } while (0)
